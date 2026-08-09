@@ -159,8 +159,14 @@ async function ensureAdmin(){
   if(!existing){await database.collection('users').insertOne({username,email:normalizeEmail(env('ADMIN_EMAIL','admin@local')),phone:phone(env('ADMIN_PHONE','620000000000')),passwordHash:await bcrypt.hash(env('ADMIN_PASSWORD'),10),role:'admin',dailyLimit:999999,avatar:'',emailVerified:true,createdAt:new Date()});}
 }
 
-// Static UI. env.js hanya berisi konfigurasi publik, tidak ada secret.
-app.use(express.static(__dirname, { index:'index.html' }));
+// Static UI lives in /public. Railway/Express serves the app from the project root.
+const publicDir = path.join(__dirname, 'public');
+app.use(express.static(publicDir));
+
+// Explicit root route prevents Railway from returning "Cannot GET /".
+app.get('/', (req, res) => {
+  res.sendFile(path.join(publicDir, 'index.html'));
+});
 
 // Vercel memakai module export; Railway menjalankan listen di bawah.
 if (require.main === module) {
