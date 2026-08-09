@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard • XS-Pedia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bgshape one"></div><div class="bgshape two"></div>
+  <header class="topbar wrap">
+  <a class="brand" href="index.html">XS<span>PEDIA</span></a>
+  <nav class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Masuk</a>
+    <a href="forgot-password.html">Lupa Password</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="docs.html">Dokumentasi</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+</header>
+  <main class="wrap page">
+  
+<section class="card">
+  <div class="page-head"><h2>Dashboard</h2><p class="muted">Tampilan normal yang sama untuk user, reseller, dan VIP.</p></div>
+  <div id="dashboardRole" class="stack"></div>
+  <div class="hr"></div>
+  <div class="grid-3">
+    <div class="info"><div class="kpi">Role sama layout</div><div class="muted">Perbedaan hanya limit dan API key.</div></div>
+    <div class="info"><div class="kpi">API request</div><div class="muted">Kirim endpoint melalui backend.</div></div>
+    <div class="info"><div class="kpi">Notifikasi</div><div class="muted">Login / register / API request ke Telegram owner.</div></div>
+  </div>
+  <div class="hr"></div>
+  <form id="requestForm" class="form">
+    <input name="endpoint" placeholder="Endpoint /am/send atau /am/verify" value="/am/send" required>
+    <input name="paramsJson" placeholder='Params JSON contoh: {"email":"demo@email.com"}' value='{"email":"demo@email.com"}' required>
+    <button class="btn" type="submit">KIRIM REQUEST</button>
+  </form>
+  <div class="endpoint" style="margin-top:16px">
+    <b>Hasil Request</b>
+    <pre id="requestResult">Belum ada request.</pre>
+  </div>
+</section>
+
+  </main>
+  <footer class="footer wrap">XS-Pedia Web Panel • Green comic style • Responsive</footer>
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body></html>

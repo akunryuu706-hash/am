@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dokumentasi • XS-Pedia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bgshape one"></div><div class="bgshape two"></div>
+  <header class="topbar wrap">
+  <a class="brand" href="index.html">XS<span>PEDIA</span></a>
+  <nav class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Masuk</a>
+    <a href="forgot-password.html">Lupa Password</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="docs.html">Dokumentasi</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+</header>
+  <main class="wrap page">
+  
+<section class="card">
+  <div class="page-head"><h2>Dokumentasi Web</h2><p class="muted">Contoh request dan daftar endpoint yang dipakai project ini.</p></div>
+  <div class="tabbed"><a href="register.html">Register</a><a href="login.html">Masuk</a><a href="forgot-password.html">Lupa Password</a></div>
+  <div class="endpoint">
+    <b>Request utama</b>
+    <pre id="docsJson">Loading...</pre>
+  </div>
+  <div class="hr"></div>
+  <div class="grid-3">
+    <div class="info"><div class="kpi">POST /api/register</div><div class="muted">Buat akun + kirim verifikasi email.</div></div>
+    <div class="info"><div class="kpi">POST /api/forgot-password</div><div class="muted">Kirim OTP ke WhatsApp.</div></div>
+    <div class="info"><div class="kpi">POST /api/upstream</div><div class="muted">Proxy request ke XS-Pedia.</div></div>
+  </div>
+</section>
+
+  </main>
+  <footer class="footer wrap">XS-Pedia Web Panel • Green comic style • Responsive</footer>
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body></html>

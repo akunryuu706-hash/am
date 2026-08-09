@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register • XS-Pedia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bgshape one"></div><div class="bgshape two"></div>
+  <header class="topbar wrap">
+  <a class="brand" href="index.html">XS<span>PEDIA</span></a>
+  <nav class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Masuk</a>
+    <a href="forgot-password.html">Lupa Password</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="docs.html">Dokumentasi</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+</header>
+  <main class="wrap page">
+  
+<section class="card">
+  <div class="page-head"><h2>Register</h2><p class="muted">Username, email, nomor 62, password, dan foto profile via link opsional.</p></div>
+  <form id="registerForm" class="form">
+    <div class="form-grid">
+      <input name="username" placeholder="Username" required>
+      <input name="email" type="email" placeholder="Email" required>
+      <input name="phone" placeholder="No telepon (62...)" required>
+      <input name="password" type="password" placeholder="Password" required>
+    </div>
+    <input name="avatar" placeholder="Link foto profile (opsional)">
+    <button class="btn" type="submit">DAFTAR</button>
+  </form>
+  <div id="verifyEmailBox" class="endpoint hidden" style="margin-top:18px">
+    <b>✓ Tahap 2 — Verifikasi Email</b>
+    <p class="muted">Tempel link yang dikirim ke Gmail. Cek folder Spam juga.</p>
+    <form id="verifyEmailForm" class="form">
+      <input id="verifyEmail" name="email" type="email" readonly>
+      <input name="link" placeholder="Tempel link verifikasi di sini" required>
+      <button class="btn" type="submit">VERIFIKASI & SELESAI</button>
+    </form>
+  </div>
+</section>
+
+  </main>
+  <footer class="footer wrap">XS-Pedia Web Panel • Green comic style • Responsive</footer>
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body></html>

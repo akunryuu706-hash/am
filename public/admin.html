@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin • XS-Pedia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bgshape one"></div><div class="bgshape two"></div>
+  <header class="topbar wrap">
+  <a class="brand" href="index.html">XS<span>PEDIA</span></a>
+  <nav class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Masuk</a>
+    <a href="forgot-password.html">Lupa Password</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="docs.html">Dokumentasi</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+</header>
+  <main class="wrap page">
+  
+<section class="card">
+  <div class="page-head"><h2>Admin Panel</h2><p id="adminNotice" class="muted">Login sebagai admin untuk mengelola user.</p></div>
+  <div class="tabbed"><a href="dashboard.html">Dashboard</a><a href="docs.html">Dokumentasi</a><a href="profile.html">Profile</a></div>
+
+  <div class="actions">
+    <button class="btn" id="adminLoad" type="button">LOAD USERS</button>
+  </div>
+
+  <div class="endpoint" style="margin-top:16px">
+    <b>Daftar User</b>
+    <pre id="usersResult">Belum ada data.</pre>
+  </div>
+
+  <div class="hr"></div>
+  <h3 class="section-title">Edit User</h3>
+  <form id="adminUpdate" class="form">
+    <div class="form-grid">
+      <input name="id" placeholder="User ObjectId" required>
+      <select name="role">
+        <option value="">Pilih role</option>
+        <option value="user">user</option>
+        <option value="reseller">reseller</option>
+        <option value="vip">vip</option>
+        <option value="admin">admin</option>
+      </select>
+      <input name="dailyLimit" type="number" placeholder="Limit / hari">
+      <input name="username" placeholder="Username baru">
+      <input name="email" placeholder="Email baru">
+      <input name="password" type="password" placeholder="Password baru">
+    </div>
+    <input name="customApiKey" placeholder="Custom API Key VIP">
+    <input name="avatar" placeholder="Link foto profile">
+    <button class="btn" type="submit">SIMPAN USER</button>
+  </form>
+
+  <div class="hr"></div>
+  <h3 class="section-title">Blacklist IP</h3>
+  <form id="blacklistForm" class="form">
+    <input name="ip" placeholder="IP address" required>
+    <input name="reason" placeholder="Alasan" value="spam">
+    <button class="btn" type="submit">BLACKLIST IP</button>
+  </form>
+
+  <div class="hr"></div>
+  <h3 class="section-title">Hapus Transaction ID</h3>
+  <form id="txDeleteForm" class="form">
+    <input name="txId" placeholder="Transaction ID" required>
+    <button class="btn secondary" type="submit">HAPUS TX</button>
+  </form>
+</section>
+
+  </main>
+  <footer class="footer wrap">XS-Pedia Web Panel • Green comic style • Responsive</footer>
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body></html>
